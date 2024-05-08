@@ -1,9 +1,9 @@
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
-import SaveIcon from '../assets/icons/save-icon.png'
-import BlogIcon from '../assets/icons/blog-icon.png'
-import CodeIcon from '../assets/icons/code-icon.png'
-import SearchIcon from '../assets/icons/search-icon.png'
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import SaveIcon from '../assets/icons/save-icon.png';
+import BlogIcon from '../assets/icons/blog-icon.png';
+import CodeIcon from '../assets/icons/code-icon.png';
+import SearchIcon from '../assets/icons/search-icon.png';
 
 export default function DesktopNav() {
   return (
@@ -17,26 +17,29 @@ export default function DesktopNav() {
 }
 
 const Wrapper = styled.nav`
-display: flex;
-justify-content: space-around;
-gap: 10px;
-align-items: center;
-color: antiquewhite;
-`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: antiquewhite;
+`;
 
 const StyledLink = styled(Link)`
-display: flex;
-gap: 5px;
-align-items: center;
-border: 1px solid #2c2c2c;
-padding: .5rem .75rem;
-border-radius: 10px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  border: 1px solid #2c2c2c;
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease; 
 
-img {
-  height: 20px;
-    min-height: 20px;
-    min-width: 20px;
+  &:hover {
+    background-color: var(--accent); 
+    color: #242424;
+  }
+
+  img {
+    height: 20px;
     width: 20px;
-}
-`
-
+  }
+`;

@@ -1,61 +1,69 @@
-import {AiFillLinkedin, AiFillGithub, AiFillInstagram, AiOutlineTwitter} from 'react-icons/ai'
-import styled from 'styled-components'
+import { AiFillLinkedin, AiFillGithub, AiFillInstagram, AiOutlineTwitter } from 'react-icons/ai';
+import styled from 'styled-components';
 
 export default function Footer() {
   return (
     <Wrapper>
-      <div className='footer-rows'>
-      <div className='social-icons'>
-          <a href={'https://www.linkedin.com/in/aldo-portillo-09b187253/'} target={"_blank"} rel="noreferrer"><AiFillLinkedin size={50}/></a>
-          <a href={'https://github.com/aldoportillo'} target={"_blank"} rel="noreferrer"><AiFillGithub size={50}/></a>
-          <a href={'https://www.instagram.com/portillo.mma/'} target={"_blank"} rel="noreferrer"><AiFillInstagram size={50}/></a>
-          <a href={'https://twitter.com/aldoportillodev'} target={"_blank"} rel="noreferrer"><AiOutlineTwitter size={50}/></a>
-        </div>
-        <p><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target={"_blank"} rel="noreferrer">Don&apos;t Click!</a></p>
-        
-      </div>
-      <div className='footer-rows'>
-        <a href="https://whimsical.com/detailed-site-map-2W9iQ5URBfbF7csc8sASAe" target={"_blank"} rel="noreferrer">3D Portfolio</a>
-        <p>Aldo Portillo &copy; {new Date().getFullYear()}</p> 
-      </div>
+      <SocialIcons>
+        <IconLink href={'https://www.linkedin.com/in/aldo-portillo-09b187253/'} target="_blank" rel="noreferrer"><AiFillLinkedin size={50}/></IconLink>
+        <IconLink href={'https://github.com/aldoportillo'} target="_blank" rel="noreferrer"><AiFillGithub size={50}/></IconLink>
+        <IconLink href={'https://www.instagram.com/portillo.mma/'} target="_blank" rel="noreferrer"><AiFillInstagram size={50}/></IconLink>
+        <IconLink href={'https://twitter.com/aldoportillodev'} target="_blank" rel="noreferrer"><AiOutlineTwitter size={50}/></IconLink>
+      </SocialIcons>
+      <MiscLinks>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noreferrer">Don&apos;t Click!</a>
+        <a href="https://whimsical.com/detailed-site-map-2W9iQ5URBfbF7csc8sASAe" target="_blank" rel="noreferrer">3D Portfolio</a>
+      </MiscLinks>
+      <CopyRight>Aldo Portillo &copy; {new Date().getFullYear()}</CopyRight>
     </Wrapper>
-  )
+  );
 }
 
-
 const Wrapper = styled.footer`
-
-  align-self: center;
-  background-color: var(--header);
-  width: 100vw;
+  align-items: center;
+  background-color: var(--header); // Make sure your CSS variables are defined.
   color: #ffffff;
   display: flex;
   flex-direction: column;
-  bottom:0;
-  padding-top: 1rem;
+  padding: 1rem 3vw;
+  text-align: center;
+  width: 100%;
+`;
 
-.footer-rows{
+const SocialIcons = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding-left: 3vw;
-  padding-right: 3vw;
-}
+  width: 100%;
+  max-width: 600px; 
+  margin-bottom: 20px;
+`;
 
-.footer-rows >a:link{
-  color: #ffffff;
-}
+const IconLink = styled.a`
+  color: #ffffff; // Default state color.
+  transition: color 0.3s;
 
-.footer-rows > a:visited{
-  color: #ffffff;
-}
+  &:hover {
+    color: var(--accent); 
+  }
+`;
 
-.footer-rows > a:hover {
-  color: var(--accent);
-}
+const MiscLinks = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px;
 
-/* selected link */
-.footer-rows > a:active {
-  color: white;
-}
-`
+  a {
+    color: #ffffff;
+    transition: color 0.3s;
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+`;
+
+const CopyRight = styled.p`
+  margin: 10px 0 0;
+  width: 100%; // Spread the copyright statement across the width.
+`;
