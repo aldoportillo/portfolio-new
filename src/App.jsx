@@ -25,40 +25,34 @@ function App() {
   const projectsData = [
     {
       id: 1,
-      name: "Portfolio Website",
-      description: "A personal portfolio website to showcase my projects and skills in full stack development. Built with React and styled-components.",
-      image: "https://example.com/images/portfolio-website.jpg"
+      name: "Neat on the Rocks",
+      description: "A social media application that brings users together for memorable and responsible nights. Built with a React client, Node and Express server. Databases with PostgreSQL for structured cocktail data and MongoDB for unstructured user data. Hosted on AWS. This app is meant to revolutionize the way people drink.",
+      image: "https://res.cloudinary.com/dkhtrg1ts/image/upload/v1705443791/Portfolio/notr-card_exiwxh.png"
     },
     {
       id: 2,
-      name: "Recipe App",
-      description: "A web application for users to share and discover recipes. Features user authentication and recipe management. Developed using Node.js, Express, and MongoDB.",
-      image: "https://example.com/images/recipe-app.jpg"
+      name: "BodyTrackPro",
+      description: "A webapp built on Rails with a PostgreSQL database that allows users to track their body metrics, vitamin intake and nutrition. Users can create, read, update, and delete body metrics and macro nutrients. With beautiful charts and graphs, users can visualize their progress over time. This app is meant to help users achieve their fitness goals.",
+      image: "https://res.cloudinary.com/dkhtrg1ts/image/upload/v1705443791/Portfolio/btp-card_fptl63.png"
     },
     {
       id: 3,
-      name: "Weather Dashboard",
-      description: "A dashboard displaying real-time weather data fetched from an API. Users can search for weather by city. Implemented with JavaScript and API integration.",
-      image: "https://example.com/images/weather-dashboard.jpg"
+      name: "BoutBuddy",
+      description: "An event management system that is best described as Tinder for fighters. Swipe right on someone you think you can beat, swipe left on someone you think you can't. If you both swipe right, you automatically get assigned to an event created by a promoter. This app focuses a lot on privilege based roles and permissions. Built with Rails and a PostgreSQL database. ",
+      image: "https://res.cloudinary.com/dkhtrg1ts/image/upload/v1715359545/Portfolio/bbk3d7ccrxheyem5ebxa.png"
     },
     {
       id: 4,
-      name: "Fitness Tracker",
-      description: "A mobile app to help users track their fitness routines and progress. Includes custom workout plans and tracking features. Built with React Native.",
-      image: "https://example.com/images/fitness-tracker.jpg"
+      name: "TAA Logistics Website and CRM",
+      description: "My first ever client project. A website and CRM for a logistics company. The website is built with React and the CRM is built with Rails. The CRM allows the client to manage their employees, quotes and applications. The CRM focuses a lot on privilege based roles and permissions. This is meant to optimize their workflow throw mass texts to dispatched drivers and automated quotes based on their current pricing model.",
+      image: "https://res.cloudinary.com/dkhtrg1ts/image/upload/v1715360225/Portfolio/skj0skshqgvy5rgokbsi.png"
     },
     {
       id: 5,
-      name: "E-commerce Store",
-      description: "An online store for a local boutique. Supports product browsing, cart management, and checkout functionality. Created with Django and a PostgreSQL database.",
-      image: "https://example.com/images/e-commerce-store.jpg"
+      name: "VinoValley",
+      description: "A WIP wine review app that allows users to search for wines, leave reviews, and learn about appellation geography. Built using a PostGIS database. The app uses the wine-searcher.com API to get wine data. This app is being built because I will be taking my level 1 sommelier exam soon, and I will learn a lot from this technical endeavour. I also want to learn more about PostGIS and how to use it in a real world application. Currently testing out api endpoints in Insomnia and storing data in PostGIS.",
+      image: "https://res.cloudinary.com/dkhtrg1ts/image/upload/v1705443792/Portfolio/vv-card_iyy8vv.png"
     },
-    {
-      id: 6,
-      name: "Chat Application",
-      description: "A real-time chat application that supports multiple users and rooms. Features user accounts and data security. Developed using Socket.io and React.",
-      image: "https://example.com/images/chat-application.jpg"
-    }
   ];
 
   return (
