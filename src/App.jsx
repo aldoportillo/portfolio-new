@@ -8,6 +8,7 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import Blog from './pages/Blog'
 import Projects from './pages/Projects'
+import Contact from './pages/Contact'
 
 function App() {
 
@@ -67,7 +68,7 @@ function App() {
         <Route path="/blog/:slug" element={<PageContainer><Blog /></PageContainer>} />
         <Route path="/blogs/new" element={<PageContainer><NewBlog /></PageContainer>} />
         <Route path="/projects" element={<PageContainer><Projects projectsData={projectsData} /></PageContainer>} />
-        <Route path="/contact" element={<PageContainer><Home /></PageContainer>} />
+        <Route path="/contact" element={<PageContainer><Contact /></PageContainer>} />
       </Routes>
   )
 }
