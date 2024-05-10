@@ -65,13 +65,13 @@ const Main = styled.main`
   position: relative;
   overflow: hidden;
   justify-content: center;
-  width: 100%; // Set to 100% to ensure it expands to fill the parent width
+  width: 100%; 
   flex: 1;
-  padding: 0 20px; // Add padding if needed, adjust according to your design
+  padding: 0 20px; 
 
-  @media (max-width: 768px) { // Adjust for mobile screens
-    width: 100vw; // Ensure full viewport width is used on smaller screens
-    padding: 0; // Optional: remove padding on smaller screens if needed
+  @media (max-width: 768px) {
+    width: 100vw;
+    padding: 0; 
   }
 `;
 
