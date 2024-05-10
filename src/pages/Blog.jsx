@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -20,20 +20,19 @@ export default function NewBlog() {
       })
       .catch(err => {
         console.error("Error fetching blog data: ", err);
-        setContent(null); // Handle error states appropriately
+        setContent(null); 
       });
   }, [data.id]);
 
-  if (!content) return <p>Loading...</p>; // Loading state
+  if (!content) return <p>Loading...</p>;
 
   return (
     <BlogContainer>
       <Title>{content.title}</Title>
       <ReactMarkdown
-        children={content.body_markdown}
         remarkPlugins={[remarkGfm]}
         components={{
-          code({ node, inline, className, children, ...props }) {
+          code({ inline, className, children, ...props }) {
             const match = /language-(\w+)/.exec(className || '');
             return !inline && match ? (
               <StyledSyntaxHighlighter
@@ -51,45 +50,45 @@ export default function NewBlog() {
             );
           }
         }}
-      />
+      >{content.body_markdown}</ReactMarkdown>
     </BlogContainer>
   );
 }
 
 const BlogContainer = styled.div`
-  margin: 0 auto;  // Center the container horizontally
+  margin: 0 auto; 
   padding: 20px;
-  background-color: var(--background-color); // Dark background color
-  color: #ccc; // Light text color for readability
+  background-color: var(--background-color); 
+  color: #ccc;
   width: 100%;
-  max-width: 800px; // Maximum width for desktop screens
+  max-width: 800px;
   box-sizing: border-box;
 
   @media (max-width: 768px) {
-    width: 100%; // Ensures it uses full width on mobile devices
-    padding: 15px; // Adjust padding for smaller screens
-    max-width: 100%; // Allows the container to expand to the full viewport width
+    width: 100%; 
+    padding: 15px;
+    max-width: 100%;
   }
 `;
 
 const Title = styled.h1`
-  color: #5eddac; // Accent color
+  color: #5eddac; 
   text-align: center;
-  margin-bottom: 20px; // Visual separation
+  margin-bottom: 20px; 
   @media (max-width: 768px) {
-    font-size: 1.5rem; // Appropriately size the title for smaller screens
+    font-size: 1.5rem; 
   }
 `;
 
 const StyledSyntaxHighlighter = styled(SyntaxHighlighter)`
-  background-color: #282c34; // Matching oneDark background
+  background-color: #282c34; 
   border-radius: 10px;
-  overflow: auto; // Allow scrolling within the code blocks
-  margin: 10px 0; // Add margin for spacing
-  padding: 10px; // Padding inside the code blocks for better readability
-  white-space: pre; // Maintain whitespace formatting
-  width: 100%; // Ensures the element is not wider than its container
+  overflow: auto;
+  margin: 10px 0; 
+  padding: 10px; 
+  white-space: pre;
+  width: auto;
   @media (max-width: 768px) {
-    font-size: 0.8rem; // Smaller font size in code blocks for smaller screens
+    font-size: 0.8rem; 
   }
 `;
