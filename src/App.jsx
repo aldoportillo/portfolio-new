@@ -39,7 +39,7 @@ function App() {
       id: 3,
       name: "BoutBuddy",
       description: "An event management system that is best described as Tinder for fighters. Swipe right on someone you think you can beat, swipe left on someone you think you can't. If you both swipe right, you automatically get assigned to an event created by a promoter. This app focuses a lot on privilege based roles and permissions. Built with Rails and a PostgreSQL database. ",
-      image: "https://res.cloudinary.com/dkhtrg1ts/image/upload/v1715359545/Portfolio/bbk3d7ccrxheyem5ebxa.png"
+      image: "https://res.cloudinary.com/dkhtrg1ts/image/upload/v1715366450/Portfolio/Screenshot_2024-05-10_at_1.39.58_PM_cgn1gh.png"
     },
     {
       id: 4,
