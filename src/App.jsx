@@ -22,7 +22,7 @@ function App() {
 
   return (
       <Routes>
-        <Route path="/" element={<PageContainer><Home /></PageContainer>} />
+        <Route path="/" element={<PageContainer><Home blogData={blogData}/></PageContainer>} />
         <Route path="/blogs" element={<PageContainer><Blogs blogData={blogData} /></PageContainer>} />
         <Route path="/blog/:slug" element={<PageContainer><Blog /></PageContainer>} />
         <Route path="/blogs/new" element={<PageContainer><NewBlog /></PageContainer>} />

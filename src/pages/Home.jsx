@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import Posts from "../components/Posts";
+import PropTypes from "prop-types";
 
-function Home() {
+function Home({ blogData }) {
   return (
     <Wrapper>
       <Header>
@@ -11,7 +12,7 @@ function Home() {
       <Bio>
       Based in Chicago. Blending problem-solving skills with creativity and resilience learned from my roles as an MMA fighter and bartender. My diverse experiences fuel my ability to approach technology challenges from unique angles, constantly pushing for growth and innovation.
       </Bio>
-      <Posts />
+      <Posts blogData={blogData} />
     </Wrapper>
   );
 }
@@ -22,22 +23,22 @@ const Wrapper = styled.div`
   align-items: center;
   padding: 40px 20px;
   min-height: 100vh;
-  background-color: #242424; // Dark background
-  color: #f5f5f5; // Light text for contrast
+  background-color: #242424; 
+  color: #f5f5f5;
 `;
 
 const Header = styled.h1`
   margin: 0;
   font-size: 2.5em;
-  color: #f5f5f5; // Ensuring the main text is visible on dark background
+  color: #f5f5f5;
 `;
 
 const Highlight = styled.span`
-  color: #5eddac;  // Your chosen accent color
+  color: #5eddac;  
 `;
 
 const Subheader = styled.h2`
-  color: #ccc; // A lighter gray for subheader to differentiate from main text
+  color: #ccc; 
   font-size: 1.5em;
   margin-top: 0.5em;
 `;
@@ -48,7 +49,11 @@ const Bio = styled.p`
   text-align: center;
   max-width: 600px;
   margin-top: 20px;
-  color: #ddd; // Light gray for bio to ensure readability
+  color: #ddd; 
 `;
+
+Home.propTypes = {
+  blogData: PropTypes.array
+};
 
 export default Home;
