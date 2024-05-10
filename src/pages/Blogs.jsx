@@ -20,7 +20,7 @@ export default function Blogs({ blogData }) {
                 <React.Fragment key={year}>
                     <YearTitle>{year}</YearTitle>
                     {groupedByYear[year].map(blog => (
-                        <StyledLink key={blog.id} to={`/blog/${blog.slug}`}>
+                        <StyledLink key={blog.id} to={`/blog/${blog.slug}`} state={{ from: "blog", data: blog }}>
                             <BlogTitle>{blog.title}</BlogTitle>
                             <PublishDate>{formatDate(blog.published_timestamp)}</PublishDate>
                         </StyledLink>
