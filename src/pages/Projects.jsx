@@ -26,6 +26,11 @@ const Wrapper = styled.div`
   color: #f5f5f5;
   max-width: 1200px;
   margin: auto;
+  width: 100%;
+
+    @media (min-width: 768px) {
+    width: 75%;
+    }
 `;
 
 const PageTitle = styled.h1`

@@ -20,7 +20,7 @@ function Contact() {
         event.preventDefault();
         
         console.log(formData);
-        alert('Thank you for your message!');
+        alert('Hey there! Thanks for reaching out! Unfortunately, this form is not connected to a backend yet, so your message has not been sent. Feel free to reach out to me at any of the links in the footer!');
         setFormData({
             name: '',
             email: '',
