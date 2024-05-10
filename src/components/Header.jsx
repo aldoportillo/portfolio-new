@@ -38,6 +38,10 @@ const Wrapper = styled.header`
     width: 100%;
     padding: 0 2vw;
     box-sizing: border-box;
+    .top-nav {
+      z-index: 1010; 
+    }
+    
   }
 
   .title h1 {
@@ -46,12 +50,19 @@ const Wrapper = styled.header`
     margin: 0; 
   }
 
+  .hamburger {
+    z-index: 1050;
+  }
+  
+
   @media (min-width: 1025px) {
     .title h1 {
       font-size: 2.2rem;
     }
   }
 `;
+
+
 
 Header.propTypes = {
   openNav: PropTypes.bool.isRequired,

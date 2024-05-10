@@ -32,13 +32,14 @@ const Wrapper = styled.nav`
   display: flex;
   flex-direction: column;
   padding: 20px;
-  align-items: flex-end;
+  align-items: flex-start;
   font-size: 2rem;
   gap: 2vh;
   z-index: 1000; 
   box-shadow: -2px 0 8px rgba(0,0,0,0.5); 
   overflow-x: hidden; 
 `;
+
 
 const StyledLink = styled(Link)`
   display: flex;
