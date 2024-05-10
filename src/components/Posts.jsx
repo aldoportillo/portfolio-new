@@ -7,11 +7,11 @@ function Posts({ blogData}) {
   return (
     <Section>
       <Heading>Latest Posts</Heading>
-      {blogData.slice(0, 3).map((post) => (
-        <Article key={post.id}>
-          <PostLink to={post.link}>
-            <Title>{post.title}</Title>
-            <Summary>{post.summary}</Summary>
+      {blogData.slice(0, 3).map((blog) => (
+        <Article key={blog.id}>
+          <PostLink to={`/blog/${blog.slug}`} state={{ from: "blog", data: blog }}>
+            <Title>{blog.title}</Title>
+            <Summary>{blog.summary}</Summary>
           </PostLink>
         </Article>
       ))}
