@@ -10,7 +10,7 @@ export default function DesktopNav() {
     <Wrapper>
       <StyledLink to="/"><img src={SaveIcon} alt='home icon'/><span>Home</span></StyledLink>
       <StyledLink to="/projects"><img src={CodeIcon} alt='projects icon'/><span>Projects</span></StyledLink>
-      <StyledLink to="/blog"><img src={BlogIcon} alt='blogs icon'/><span>Blogs</span></StyledLink>
+      <StyledLink to="/blogs"><img src={BlogIcon} alt='blogs icon'/><span>Blogs</span></StyledLink>
       <StyledLink to="/contact"><img src={SearchIcon} alt='contact icon'/><span>Contact</span></StyledLink>
     </Wrapper>
   )

@@ -5,7 +5,7 @@ export default function NavBar() {
         <nav className='nav-bar'>
             <Link to="/" >Home</Link>
             {/* <Link to="/projects" >Projects</Link> */}
-            <Link to="/blog" >Blog</Link>
+            <Link to="/blogs" >Blog</Link>
             <Link to="/contact" >Contact</Link> 
         </nav>
   )

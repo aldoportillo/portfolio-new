@@ -12,7 +12,7 @@ export default function Footer() {
       </SocialIcons>
       <MiscLinks>
         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noreferrer">Don&apos;t Click!</a>
-        <a href="https://whimsical.com/detailed-site-map-2W9iQ5URBfbF7csc8sASAe" target="_blank" rel="noreferrer">3D Portfolio</a>
+        <a href="https://12-3d-text-nu.vercel.app/" target="_blank" rel="noreferrer">3D Portfolio</a>
       </MiscLinks>
       <CopyRight>Aldo Portillo &copy; {new Date().getFullYear()}</CopyRight>
     </Wrapper>
@@ -21,7 +21,7 @@ export default function Footer() {
 
 const Wrapper = styled.footer`
   align-items: center;
-  background-color: var(--header); // Make sure your CSS variables are defined.
+  background-color: var(--header);
   color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -39,7 +39,7 @@ const SocialIcons = styled.div`
 `;
 
 const IconLink = styled.a`
-  color: #ffffff; // Default state color.
+  color: #ffffff; 
   transition: color 0.3s;
 
   &:hover {
@@ -65,5 +65,5 @@ const MiscLinks = styled.div`
 
 const CopyRight = styled.p`
   margin: 10px 0 0;
-  width: 100%; // Spread the copyright statement across the width.
+  width: 100%; 
 `;
