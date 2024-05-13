@@ -25,9 +25,9 @@ const Wrapper = styled.footer`
   color: #ffffff;
   display: flex;
   flex-direction: column;
-  padding: 1rem 3vw;
+  padding: 1rem ;
   text-align: center;
-  width: 100%;
+  width: 85vw;
 `;
 
 const SocialIcons = styled.div`

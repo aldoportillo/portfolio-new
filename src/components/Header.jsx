@@ -24,7 +24,7 @@ function Header({ setOpenNav, openNav, windowSize }) {
 export default Header;
 
 const Wrapper = styled.header`
-  width: 100%;
+  width: 85vw;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -36,7 +36,6 @@ const Wrapper = styled.header`
     align-items: center;
     height: 10vh;
     width: 100%;
-    padding: 0 2vw;
     box-sizing: border-box;
     .top-nav {
       z-index: 1010; 

@@ -55,7 +55,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-
+  width: 100%;
   align-items: center;
   justify-content: space-between;
   overflow-x: hidden; 
@@ -67,9 +67,8 @@ const Main = styled.main`
   position: relative;
   overflow: hidden; 
   justify-content: center;
-
+  width: 100%;
   flex: 1;
-  padding: 0 20px; 
 
   @media (max-width: 768px) {
     width: 100vw; 
