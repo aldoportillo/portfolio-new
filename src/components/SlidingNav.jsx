@@ -22,21 +22,21 @@ SlidingNav.propTypes = {
 }
 
 const Wrapper = styled.nav`
-  position: fixed;
+position: fixed;
   top: 0;
-  right: ${({ openNav }) => (openNav ? '0' : '-100%')};
+  right: ${({ openNav }) => (openNav ? '0' : '-100%')}; 
   width: 250px;
   height: 100%;
   background-color: var(--header);
-  transition: right 0.5s; 
+  transition: right 0.5s;
   display: flex;
   flex-direction: column;
   padding: 20px;
   align-items: flex-start;
   font-size: 2rem;
   gap: 2vh;
-  z-index: 1000; 
-  box-shadow: -2px 0 8px rgba(0,0,0,0.5); 
+  z-index: 1000;
+  box-shadow: -2px 0 8px rgba(0,0,0,0.5);
   overflow-x: hidden; 
 `;
 
